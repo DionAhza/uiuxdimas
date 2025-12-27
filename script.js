@@ -1,15 +1,15 @@
-fetch("components/navbar.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-  });
-document.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    document.querySelectorAll(".menu li")
-      .forEach(li => li.classList.remove("active"));
-    e.target.classList.add("active");
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('/components/navbar.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Navbar not found');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    })
+    .catch(err => console.error(err));
 });
+
 //////// jangan diubah yang diatas ////////
 // Hover efek follow mouse di circle
 const circle = document.querySelector(".circle");
