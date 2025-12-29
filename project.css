@@ -1,0 +1,149 @@
+.projects {
+  padding: 120px 80px;
+  background: #0b0b0e;
+}
+
+.projects-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 100px;
+}
+
+.projects-header h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.projects-header h2 span {
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56,
+    #FFA84B
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-header p {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* PROJECT ITEM */
+.project {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-areas: "text image";
+  gap: 80px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.project.reverse {
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-areas: "image text";
+}
+
+.project-text {
+  grid-area: text;
+}
+
+.project-image {
+  grid-area: image;
+}
+
+
+/* .project.reverse .project-text {
+  grid-column: 2;
+}
+
+.project.reverse .project-image {
+  grid-column: 1;
+} */
+
+
+.project-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+}
+.project-title {
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.project-text p {
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.project-meta {
+  list-style: none;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.project-meta li {
+  margin-bottom: 8px;
+}
+
+.project-meta strong {
+  color: #fff;
+}
+
+/* PROJECT IMAGE */
+.project-image {
+  border-radius: 22px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image.green {
+  background: linear-gradient(
+    135deg,
+    #0f3d2e,
+    #14532d
+  );
+}
+
+.project-image.blue {
+  background: linear-gradient(
+    135deg,
+    #1e3a8a,
+    #2563eb
+  );
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
