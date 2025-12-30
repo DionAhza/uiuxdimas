@@ -1,0 +1,397 @@
+.profile-section {
+  padding: 120px 6%;
+  background: radial-gradient(circle at top, #141417, #0b0b0e);
+  color: #fff;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* CARD BASE */
+.card {
+  position: relative;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(15, 15, 20, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 80px rgba(0,0,0,.55);
+  z-index: 1;
+}
+
+/* GRADIENT BORDER */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: var(--border-gradient);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* HOVER LEBIH HIDUP */
+.card:hover {
+  transform: translateY(-4px);
+  transition: .4s ease;
+}
+
+
+/* TITLE */
+.card-title {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: linear-gradient(135deg,#8b5cf6,#ff5e69);
+}
+
+/* PROFILE */
+:root {
+  --bg-dark: #0a0a0a;
+  --accent-grad: linear-gradient(135deg, #8b5cf6, #ff5e69, #feb47b);
+}
+
+.profile-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 32px;
+  background: rgba(15, 15, 20, 0.75);
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0,0,0,.65);
+}
+
+/* BORDER GRADIENT */
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: var(--border-gradient);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* SOFT GLOW */
+.profile-card::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: var(--border-gradient);
+  opacity: .12;
+  filter: blur(80px);
+  z-index: 0;
+}
+.profile-card > *,
+.card > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Teks Melintang di Background */
+.bg-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-text .line {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  color: rgba(255,255,255,0.15);
+  text-transform: uppercase;
+}
+
+.line-1 {
+  transform: rotate(-6deg);
+}
+
+.line-2 {
+  align-self: flex-end;
+  transform: rotate(6deg);
+}
+
+/* Foto Profil */
+/* CONTAINER BELAKANG FOTO */
+.profile-marquee-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* BAR */
+.profile-marquee {
+  position: absolute;
+  width: 160%;
+  left: -30%;
+  height: 42px;
+  overflow: hidden;
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+}
+
+/* POSISI & ROTASI (X) */
+.profile-marquee-1 {
+  top: 30%;
+  transform: rotate(-12deg);
+}
+
+.profile-marquee-2 {
+  top: 55%;
+  transform: rotate(12deg);
+}
+
+/* TEKS JALAN */
+.profile-marquee span {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,.55);
+  animation: profileMarqueeMove 18s linear infinite;
+}
+
+.profile-marquee-2 span {
+  animation-duration: 22s;
+  color: rgba(255,255,255,.4);
+}
+
+/* KEYFRAMES KHUSUS PROFILE */
+@keyframes profileMarqueeMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+.profile-img {
+  width: 70%;
+  border-radius: 22px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#0f0f14,#0f0f14) padding-box,
+    linear-gradient(90deg,#B16CEA,#FF5E69,#FF8A56,#FFA84B) border-box;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.6),
+    0 0 0 1px rgba(255,255,255,.08);
+}
+
+
+/* Badge "Hi" */
+.hi-badge {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(#0f0f14,#0f0f14) padding-box,
+    linear-gradient(90deg,#B16CEA,#FF5E69,#FF8A56,#FFA84B) border-box;
+
+  border: 1.5px solid transparent;
+  color: #fff;
+  z-index: 3;
+  backdrop-filter: blur(6px);
+}
+
+
+/* Container Informasi di Bagian Bawah */
+.info-container {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Styling Pill/Tombol Lonjong */
+.pill {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+}
+
+.name-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  background:
+    linear-gradient(#0f0f14,#0f0f14) padding-box,
+    linear-gradient(90deg,#B16CEA,#FF5E69,#FF8A56,#FFA84B) border-box;
+
+  border: 1.5px solid transparent;
+}
+
+.icon-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  color: #fff;
+  transition: .3s;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(135deg,#B16CEA,#FF5E69);
+  border-color: transparent;
+}
+.contact-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+
+  font-size: 13px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+}
+
+.icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.15);
+}
+
+
+.icon-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.mail-icon { background: linear-gradient(to right, #8b5cf6, #d946ef); }
+.phone-icon { background: linear-gradient(to right, #ec4899, #f97316); }
+/* TIMELINE */
+.timeline {
+  list-style: none;
+}
+
+.timeline li {
+  margin-bottom: 18px;
+}
+
+.timeline small {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.timeline h4 {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.timeline p {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* TOOLS */
+.tools {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+  font-size: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
