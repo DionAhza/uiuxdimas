@@ -1,0 +1,75 @@
+.idea-launchpad {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.idea-launchpad__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  padding: 80px 60px;
+  border-radius: 28px;
+  background: linear-gradient(
+    120deg,
+    #a86cff 0%,
+    #ff5f8f 45%,
+    #ffb347 100%
+  );
+  text-align: center;
+  overflow: hidden;
+}
+
+/* TEXT */
+.idea-launchpad__title {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 35px;
+}
+
+/* BUTTON */
+.idea-launchpad__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+}
+
+.idea-launchpad__btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* DECORATIVE SHAPES */
+.idea-launchpad__spark {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.spark-1 {
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255,255,255,0.35);
+  top: -120px;
+  left: -120px;
+}
+
+.spark-2 {
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, #fff, transparent 70%);
+  bottom: -60px;
+  right: -60px;
+  opacity: 0.4;
+}

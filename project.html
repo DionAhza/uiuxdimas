@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar-wrap">
+  <div class="navbar">
+    <div class="pill"> <span>Hi Dimas!</span></div>
+
+    <ul class="menu">
+     <li class="active"><a href="index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
+    <a href="project.html" style="text-decoration: none; color: #aaa;"><li> Project</li></a>  
+      <li>Services</li>
+      <li>Class</li>
+      <li>Product</li>
+    </ul>
+
+    <button class="contact-btn">
+      Get In Touch ↗
+    </button>
+  </div>
+</nav>  
+ <style>
+  
+/* NAVBAR */
+/* NAVBAR WRAP */
+.navbar-wrap {
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.navbar-wrap.scrolled .navbar {
+  background: rgba(15,15,20,0.9);
+  box-shadow: 0 14px 45px rgba(0,0,0,0.45);
+}
+
+/* NAVBAR PILL */
+.navbar {
+  width: 85%;
+  background: rgba(20, 20, 25, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 999px;
+  padding: 14px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+
+/* LEFT PILL */
+/* .pill {
+  background: rgba(255,255,255,0.04);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+} */
+
+.pill span {
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+  color: #aaa;
+}
+.menu li {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.menu li:hover {
+  color: #fff;
+}
+
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+
+/* BUTTON */
+.contact-btn {
+  background: white;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.25);
+}
+
+</style>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document
+      .querySelector('.navbar-wrap')
+      .classList.toggle('scrolled', window.scrollY > 30);
+  });
+</script>
+<section class="project-hero">
+    <link rel="stylesheet" href="project-css/project-hero.css">
+  <div class="project-hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-avatar">
+      <span class="hero-wave">Hi 👋</span>
+      <img src="profile/profile.png" alt="Dimas Profile">
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+       <span>  Hello, I’m Dimas, </span><br>
+        UI/UX Design based <br>
+        in Indonesia
+      </h1>
+
+      <p class="hero-desc">
+        UI/UX Designer and Design Mentor with 3+ years of working experience
+        in several companies and institutions. I specialize in UI/UX Design,
+        Responsive Web Design, and Visual Development.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="hero-btn primary">View My CV</a>
+        <a href="#" class="hero-btn secondary">Email me</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      ✦ User Research ✦ User Flow ✦ Wireframing ✦ Prototyping ✦
+      Design System ✦ Usability Testing ✦ Web Design ✦
+    </div>
+  </div>
+
+ <link rel="stylesheet" href="about.css">
+<section class="about-hero">
+ <div class="about-top">
+  <!-- LEFT -->
+  <div class="about-left">
+    <h1>It's Me<br><span>Dimas Pradipa A.</span></h1>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="about-right">
+    <p>
+      Over the past 3 years, I have worked with various companies and
+      institutions. I enjoy creating interfaces that delight users and help
+      businesses grow. Based in Bogor, Indonesia, I am open to remote
+      opportunities worldwide.
+    </p>
+
+    <div class="socials">
+  <a href="#" class="social " aria-label="Website">
+    <i class="bi bi-globe"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Dribbble">
+    <i class="bi bi-dribbble"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Behance">
+    <i class="bi bi-behance"></i>
+  </a>
+</div>
+
+  </div>
+</div>
+
+
+  <!-- VIDEO CARD -->
+  <div class="video-card">
+    <img src="video/about.png" alt="Video Preview">
+    <div class="play-btn">▶</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Design</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>16+</h3>
+      <p>Successfully Projects<br>Completed</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Teaching</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------------------------------Servicess_______ -->
+<section class="services-section">
+    <link rel="stylesheet" href="project-css/services.css">
+  <h2 class="services-title">
+    Design that solve problem, one<br>
+    <span>product at a time</span>
+  </h2>
+
+  <div class="services-list">
+    <a href="#" class="service-item ">
+      <span>UI/UX Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Web Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Graphic Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Wordpress Dev</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+  </div>
+</section>
+<!-- Class----------------------------------------------------------- -->
+ <section class="class-section">
+    <link rel="stylesheet" href="project-css/class.css">
+    <div class="class-head">
+  <h2 class="class-title">
+    Look at My <span>Class</span>
+  </h2>
+  <p class="class-subtitle">
+    Classes are available to learn about Design and Technology,<br>
+    mentored directly by me.
+  </p>
+</div>
+  <div class="class-grid">
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name ">
+          Class Design : Belajar Design dari Level Beginner to Expert dalam 6 Bulan
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp3.000.000</span>
+          <span class="price-old">Rp5.000.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name orange">
+          General Class : Belajar Design dari Level Beginner to Expert dalam 3 Bulan
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp1.050.000</span>
+          <span class="price-old">Rp1.500.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+     <div class="class-thumb">
+  <img src="case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online & Offline</span>
+        <h3 class="class-name ">
+          Mastery Design System : Merancang dan Membuat Design System KIT
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp1.700.000</span>
+          <span class="price-old">Rp2.000.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name orange">
+          UI Design : Menghasilkan Dolar Hanya Dengan Menjual Produk UI KIT
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp2.500.000</span>
+          <span class="class-discount">50%</span>
+          <span class="price-old">Rp3.000.000</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Project----------------------------------------------- -->
+  <section class="projects">
+  <div class="projects-header">
+    <h2>
+      Look at My <span>Best Work Projects.</span>
+    </h2>
+    <p>
+      Some of the best projects that I have filtered and gotten permission
+      from the client to be made public.
+    </p>
+  </div>
+
+  <!-- PROJECT 1 -->
+   <link rel="stylesheet" href="project.css">
+  <div class="project">
+    <div class="project-text">
+      <h3>
+        <span class="dot"></span>
+        <span class="project-title">GrowHealth</span> – Smart Nutrition Companion
+      </h3>
+
+      <p>
+        GrowHealth is a personal nutrition coaching app to build healthier
+        eating habits without the confusion of calories.
+        <br><br>
+        As the Product Design Lead, I led the entire design workflow of this
+        project, starting from understanding the problem and user needs,
+        translating insights into product strategy, designing user flows and
+        interfaces, and validating the solution through usability-driven design
+        decisions.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : Product Design Lead</li>
+        <li><strong>Scope</strong> : End-to-end Product Design Process</li>
+        <li><strong>Date</strong> : October – December 2023</li>
+      </ul>
+    </div>
+
+    <div class="project-image green">
+      <img src="projects/growhealth.webp" alt="GrowHealth App" />
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project reverse">
+    <div class="project-text">
+      <h3>
+        <span class="dot"></span>
+        <span class="project-title">BROSISPKU</span> – Redesign Website
+      </h3>
+
+      <p>
+        Brosispku is a digital platform focused on providing information,
+        services, and communication to its core audience. As part of this
+        redesign project, I restructured the information architecture, improved
+        the visual system, and enhanced overall usability to make the website
+        more professional and effective.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : UI/UX Designer</li>
+        <li><strong>Scope</strong> : UI/UX Design, Web Design, Design System</li>
+        <li><strong>Date</strong> : August – September 2023</li>
+      </ul>
+    </div>
+
+    <div class="project-image blue">
+      <img src="projects/brosispku.png" alt="BROSISPKU Website" />
+    </div>
+  </div>
+  <!-- PROJECT 3 -->
+  
+</section>
+<!-- case----------------------------------------------------------------------- -->
+ <section class="case-studies">
+  <link rel="stylesheet" href="case.css">
+  
+
+  <div class="case-grid">
+    <!-- CARD 1 -->
+    <div class="case-card green">
+  <div class="case-image">
+    <img src="case/ecoclass.png" alt="EcoClass App" />
+  </div>
+
+  <div class="case-content">
+    <small>Product Design Lead | Case Study</small>
+    <h3><span>EcoClass</span> – Recycling Education App</h3>
+
+    <div class="case-tags">
+      <span>UX Research</span>
+      <span>UI Design</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+    </div>
+  </div>
+</div>
+
+
+    <!-- CARD 2 -->
+    <div class="case-card dark-green">
+      <div class="case-image">
+        <img src="case/recybank.png" alt="RecyBank App" />
+      </div>
+
+      <div class="case-content">
+        <small>Product Design Lead | Case Study</small>
+        <h3><span>RecyBank</span> – Scan QR Machine</h3>
+
+        <div class="case-tags">
+          <span>UX Research</span>
+          <span>UI Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-action">
+    <button>↓ View more</button>
+  </div>
+</section>
+<!-- testimonial ------------------------------------------------------------  -->
+ <section class="testimonial">
+  
+  <link rel="stylesheet" href="project-css/testimonial.css  ">
+  <div class="testimonial-inner">
+    <h2 class="testimonial-title">
+  What <span>My Clients</span> Say
+</h2>
+
+    <div class="quote quote-left">“</div>
+    <div class="quote quote-right">”</div>
+
+       
+ 
+    <div class="testimonial-slider">
+      <button class="navtest-btn" id="prev">←</button>
+
+    <div class="avatars">
+      <img data-index="0" src="avatar1.jpg">
+      <img data-index="1" src="avatar2.jpg">
+      <img data-index="2" class="active" src="avatar3.jpg">
+      <img data-index="3" src="avatar4.jpg">
+      <img data-index="4" src="avatar5.jpg">
+    </div>
+
+
+      <button class="navtest-btn" id="next">→</button>
+    </div>
+    <div class="testimonial-author">
+      <h4 id="testimonialName"></h4>
+      <span id="testimonialRole"></span>
+    </div>
+ <p class="testimonial-text" id="testimonialText"></p>
+
+
+    <!-- <div class="testimonial-author">
+      <h4>Helena Park</h4>
+      <span>Product Manager at Flowbox</span>
+    </div> -->
+
+  </div>
+</section>
+<script src="project-css/testimonial.js" defer></script>
+<!-- ideapadd----------------------------------------------- -->
+ <section class="idea-launchpad">
+  <link rel="stylesheet" href="project-css/ide.css">
+  <div class="idea-launchpad__inner">
+
+    <h2 class="idea-launchpad__title">
+      Start creating ideas and designs that help<br>
+      meet your company's needs.
+    </h2>
+
+    <a href="#" class="idea-launchpad__btn">
+      Planning Your Business →
+    </a>
+
+    <!-- Decorative shapes -->
+    <span class="idea-launchpad__spark spark-1"></span>
+    <span class="idea-launchpad__spark spark-2"></span>
+
+  </div>
+</section>
+
+</body>
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h3>Hi <span>Dimas!</span></h3>
+      <p>©2025 Website Personal by Dimas Pradipa Abiyuda</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <a href="#contact" class="footer-cta">
+        Get In Touch <i class="bi bi-arrow-up-right"></i>
+      </a>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Behance"><i class="bi bi-behance"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+</html>

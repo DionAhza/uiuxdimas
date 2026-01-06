@@ -1,0 +1,145 @@
+.class-section {
+  padding: 120px 6%;
+  
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.class-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 80px;
+}
+
+.class-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.class-title span {
+  background: linear-gradient(90deg,#B16CEA,#FF5E69,#FF8A56);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.class-subtitle {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 48px;
+}
+
+/* GRID */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* CARD */
+.class-card {
+  background: #12121a;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: .35s ease;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.class-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
+}
+
+/* IMAGE */
+.class-thumb {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  padding: 24px;
+  position: relative;
+}
+
+.class-category {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.class-thumb img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.class-discount {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* BODY */
+.class-body {
+  padding: 20px 22px 24px;
+}
+
+.class-mode {
+  display: inline-block;
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.class-name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 18px;
+    background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* .class-name.purple { color: #c084fc; }
+.class-name.orange { color: #fb923c; } */
+
+/* PRICE */
+.class-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-now {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.price-old {
+  font-size: 13px;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
+}
