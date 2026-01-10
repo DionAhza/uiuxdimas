@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dimas Portfolio</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
-<nav class="navbar-wrap">
+<body>
+    <nav class="navbar-wrap">
   <div class="navbar">
     <div class="pill"> <span>Hi Dimas!</span></div>
 
     <ul class="menu">
-      <li class="active"><a href="/index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
-       <a href="/project.html" style="text-decoration: none; color: #aaa;"><li> Project</li></a>  
+     <li class="active"><a href="/index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
+    <a href="/projects.html" style="text-decoration: none; color: #aaa;"><li> Project</li></a>  
       <li>Services</li>
       <li>Class</li>
       <li>Product</li>
-       
     </ul>
 
     <button class="contact-btn">
       Get In Touch ↗
     </button>
   </div>
-</nav>
-
-<style>
+</nav>  
+ <style>
   
 /* NAVBAR */
 /* NAVBAR WRAP */
@@ -131,7 +120,42 @@
   transform: translateX(-50%) scaleX(1);
 }
 
+/* ACTIVE STATE */
+.menu li.active a {
+ background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
 
+/* underline hover & active */
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover::after,
+.menu li.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
 
 /* BUTTON */
 .contact-btn {
@@ -159,43 +183,286 @@
       .classList.toggle('scrolled', window.scrollY > 30);
   });
 </script>
+<section class="project-hero">
+    <link rel="stylesheet" href="/project-css/project-hero.css">
+  <div class="project-hero-inner">
 
-<body>
+    <!-- LEFT -->
+    <div class="hero-avatar">
+      <span class="hero-wave">Hi 👋</span>
+      <img src="src/profile/profile.png" alt="Dimas Profile">
+    </div>
 
-  <!-- NAVBAR -->
- 
-
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <span class="subtitle">Hello, I'm Dimas.</span>
-
-      <h1>
-        Creating ideas and design that  
-        help meet your company's
-        need
+    <!-- RIGHT -->
+    <div class="hero-content">
+      <h1 class="hero-title">
+       <span>  Hello, I’m Dimas, </span><br>
+        UI/UX Design based <br>
+        in Indonesia
       </h1>
 
-      <div class="buttons">
-        <button class="btn primary">View My CV</button>
-        <button class="btn outline">Email me</button>
+      <p class="hero-desc">
+        UI/UX Designer and Design Mentor with 3+ years of working experience
+        in several companies and institutions. I specialize in UI/UX Design,
+        Responsive Web Design, and Visual Development.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#" class="hero-btn primary">View My CV</a>
+        <a href="#" class="hero-btn secondary">Email me</a>
       </div>
     </div>
 
-    <div class="circle">
-  <img src="src/Scroll.png" alt="">
-</div>
+  </div>
+</section>
+<!-- MARQUEE -->
+  <div class="marquee-stack">
 
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee">
+  <!-- BACK (GRADIENT) -->
+  <div class="marquee marquee-back">
     <div class="marquee-track">
-      ✦ User Research ✦ User Flow ✦ Wireframing ✦ Prototyping ✦
-      Design System ✦ Usability Testing ✦ Web Design ✦
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+
+      <!-- DUPLIKAT -->
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
     </div>
   </div>
+
+  <!-- FRONT (WHITE) -->
+  <div class="marquee marquee-front">
+    <div class="marquee-track">
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+
+      <!-- DUPLIKAT -->
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+    </div>
+  </div>
+
+</div>
+
+
+ <link rel="stylesheet" href="/about.css">
+<section class="about-hero">
+ <div class="about-top">
+  <!-- LEFT -->
+  <div class="about-left">
+    <h1>It's Me<br><span>Dimas Pradipa A.</span></h1>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="about-right">
+    <p>
+      Over the past 3 years, I have worked with various companies and
+      institutions. I enjoy creating interfaces that delight users and help
+      businesses grow. Based in Bogor, Indonesia, I am open to remote
+      opportunities worldwide.
+    </p>
+
+    <div class="socials">
+  <a href="#" class="social " aria-label="Website">
+    <i class="bi bi-globe"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Dribbble">
+    <i class="bi bi-dribbble"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Behance">
+    <i class="bi bi-behance"></i>
+  </a>
+</div>
+
+  </div>
+</div>
+
+
+  <!-- VIDEO CARD -->
+  <div class="video-card">
+    <img src="src/video/about.png" alt="Video Preview">
+    <div class="play-btn">▶</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Design</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>16+</h3>
+      <p>Successfully Projects<br>Completed</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Teaching</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------------------------------Servicess_______ -->
+<section class="services-section">
+    <link rel="stylesheet" href="/project-css/services.css">
+  <h2 class="services-title">
+    Design that solve problem, one<br>
+    <span>product at a time</span>
+  </h2>
+
+  <div class="services-list">
+    <a href="#" class="service-item ">
+      <span>UI/UX Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Web Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Graphic Design</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+
+    <a href="#" class="service-item">
+      <span>Wordpress Dev</span>
+      <i class="bi bi-arrow-up-right"></i>
+    </a>
+  </div>
+</section>
+<!-- Class----------------------------------------------------------- -->
+ <section class="class-section">
+    <link rel="stylesheet" href="/project-css/class.css">
+    <div class="class-head">
+  <h2 class="class-title">
+    Look at My <span>Class</span>
+  </h2>
+  <p class="class-subtitle">
+    Classes are available to learn about Design and Technology,<br>
+    mentored directly by me.
+  </p>
+</div>
+  <div class="class-grid">
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="src/case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name ">
+          Class Design : Belajar Design dari Level Beginner to Expert dalam 6 Bulan
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp3.000.000</span>
+          <span class="price-old">Rp5.000.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="src/case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name orange">
+          General Class : Belajar Design dari Level Beginner to Expert dalam 3 Bulan
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp1.050.000</span>
+          <span class="price-old">Rp1.500.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+     <div class="class-thumb">
+  <img src="src/case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online & Offline</span>
+        <h3 class="class-name ">
+          Mastery Design System : Merancang dan Membuat Design System KIT
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp1.700.000</span>
+          <span class="price-old">Rp2.000.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="class-card">
+      <div class="class-thumb">
+  <img src="src/case/ecoclass.png" alt="EcoClass">
+  <span class="class-category">Design System</span>
+</div>
+
+
+      <div class="class-body">
+        <span class="class-mode">Online</span>
+        <h3 class="class-name orange">
+          UI Design : Menghasilkan Dolar Hanya Dengan Menjual Produk UI KIT
+        </h3>
+
+        <div class="class-price">
+          <span class="price-now">Rp2.500.000</span>
+          <!-- <span class="class-discount">50%</span> -->
+          <span class="price-old">Rp3.000.000</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Project----------------------------------------------- -->
   <section class="projects">
   <div class="projects-header">
     <h2>
@@ -267,123 +534,12 @@
     </div>
   </div>
   <!-- PROJECT 3 -->
-   <link rel="stylesheet" href="/project.css">
-  <div class="project">
-    <div class="project-text">
-      <h3>
-        <span class="dot"></span>
-        <span class="project-title">Serverpoint</span> - Redesign Website
-      </h3>
-
-      <p>
-        ServerPoint is a provider of web hosting, cloud VPS, and bare metal dedicated servers that has been operating for decades, providing infrastructure solutions for global websites and applications. Bare metal dedicated servers are physical server services where all resources are dedicated to a single user, providing high performance, full control, and scalability without the “shared resource” effect.
-
-In this project, the focus of the redesign is on ServerPoint’s Bare Metal Dedicated Servers page which introduces the bare metal infrastructure service, its functions, main features, and its benefits for business users or developers who need high-performance servers.
-      </p>
-
-      <ul class="project-meta">
-        <li><strong>Role</strong> : Web Design</li>
-        <li><strong>Scope</strong> : UI Design, Web Design</li>
-        <li><strong>Date</strong> : February 2025</li>
-      </ul>
-    </div>
-
-    <div class="project-image green">
-      <img src="src/projects/serverpoint.png" alt="ServerPoint Website" />
-    </div>
-  </div>
-
-  <!-- PROJECT 4 -->
-  <div class="project reverse">
-    <div class="project-text">
-      <h3>
-        <span class="dot"></span>
-        <span class="project-title">Auly Official</span> – Fashion Brand Website
-      </h3>
-
-      <p>
-        Auly Official is a women's fashion brand focused on feminine, modern, and elegant clothing. Prior to this project, the Auly Official brand lacked an official website capable of professionally representing its visual identity and supporting its long-term digital business needs.
-
-A website is needed not only for brand presence but also as a primary platform for building consumer trust, showcasing product catalogs, and serving as the foundation for an integrated online sales ecosystem.
-      </p>
-
-      <ul class="project-meta">
-        <li><strong>Role</strong> : Web Design & Wordpress Development</li>
-        <li><strong>Scope</strong> : UI/UX Design, Web Design, Website Developer, Wordpress Developer</li>
-        <li><strong>Date</strong> : July - August 2024</li>
-      </ul>
-    </div>
-
-    <div class="project-image blue">
-      <img src="src/projects/aulyofficial.png" alt="BROSISPKU Website" />
-    </div>
-  </div>
-  <!-- PROJECT 5 -->
-   <link rel="stylesheet" href="/project.css">
-  <div class="project">
-    <div class="project-text">
-      <h3>
-        <span class="dot"></span>
-        <span class="project-title">LeadLoom</span> – SaaS Landing Page
-      </h3>
-
-      <p>
-        Streamline your sales processes with LeadLoom. a powerful sales management software designed to support sales and marketing teams. With its intuitive features, LeadLoom helps you effectively manage your sales pipeline, track goals and KPIs, and gain valuable insights for optimized performance, all in one comprehensive solution.
-
-Create stunning landing page KIT templates that captivate your audience and drive conversions. KIT products will be sold on the marketplace.
-      </p>
-
-      <ul class="project-meta">
-        <li><strong>Role</strong> : UI/UX Designer</li>
-        <li><strong>Scope</strong> : UI/UX Design, UI Kits, Web Design, Design System</li>
-        <li><strong>Date</strong> :March - May 2024</li>
-      </ul>
-    </div>
-
-    <div class="project-image green">
-      <img src="src/projects/leadloom.png" alt="GrowHealth App" />
-    </div>
-  </div>
-
-  <!-- PROJECT 6 -->
-  <div class="project reverse">
-    <div class="project-text">
-      <h3>
-        <span class="dot"></span>
-        <span class="project-title">PayFun</span> – Banking App
-      </h3>
-
-      <p>
-        PayFun is a Premium & High Quality UI Kit with Full Features Finance, Banking, E-Wallet, Payments, Money Management and more with lots of features. PayFun comes with unique style and niche, you can easily edit and customize all elements with component design that can speed up the design process for your project.
-
-PayFun is designed in a trendy and modern way, with all layers well laid out. PayFun is equipped with a design system with hundreds of components. The Design System has been equipped with typography, iconography, color styles, components, elements, buttons, input forms, alerts, avatars, checkboxes and many others.
-      </p>
-
-      <ul class="project-meta">
-        <li><strong>Role</strong> : UI/UX Designer</li>
-        <li><strong>Scope</strong> : UI/UX Design, UI Kits, Design System</li>
-        <li><strong>Date</strong> : November 2023 - February 2024</li>
-      </ul>
-    </div>
-
-    <div class="project-image blue">
-      <img src="src/projects/payfun.png" alt="BROSISPKU Website" />
-    </div>
-  </div>
+  
 </section>
-
-<!-- Case Section--------------------------------------------------------- -->
- <link rel="stylesheet" href="/case.css">
-<section class="case-studies">
-  <div class="case-header">
-    <h2>
-      Look at My <span>Best Case Study Projects.</span>
-    </h2>
-    <p>
-      Here are some of my best case study projects and some projects from my
-      students who are learning how to create UI/UX Design projects.
-    </p>
-  </div>
+<!-- case----------------------------------------------------------------------- -->
+ <section class="case-studies">
+  <link rel="stylesheet" href="/case.css">
+  
 
   <div class="case-grid">
     <!-- CARD 1 -->
@@ -428,293 +584,70 @@ PayFun is designed in a trendy and modern way, with all layers well laid out. Pa
     <button>↓ View more</button>
   </div>
 </section>
-
-<!-- ------------------Exloration Section-------------------------  -->
- <link rel="stylesheet" href="/exploration.css">
-<section class="exploration">
-  <div class="explore-header">
-    <h2>Look at My <span>Exploration</span></h2>
-    <p>
-      My Exploration Project which I like to update following different
-      design trends from year to year.
-    </p>
-  </div>
-
-  <div class="explore-grid">
-    <!-- Card -->
-    <div class="explore-card">
-      <img src="src/exploration/1.png" alt="Dashboard Project">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Dashboard</h3>
-      </div>
-    </div>
-
-    <div class="explore-card">
-      <img src="src/exploration/2.png" alt="Mobile App">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Mobile App</h3>
-            </div>
-    </div>
-
-    <div class="explore-card">
-      <img src="src/exploration/3.png" alt="Web Planning">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Web</h3>
-        
-      </div>
-    </div>
-    <div class="explore-card">
-      <img src="src/exploration/4.png" alt="Dashboard Project">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Dashboard</h3>
-       
-      </div>
-    </div>
-
-    <div class="explore-card">
-      <img src="src/exploration/5.png" alt="Mobile App">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Mobile App</h3>
-            </div>
-    </div>
-
-    <div class="explore-card">
-      <img src="src/exploration/6.png" alt="Web Planning">
-      <div class="card-body">
-        <h3><span class="exploration-title">OtwBank</span> - Web</h3>
-        
-      </div>
-    </div>
-  </div>
-
- <div class="explore-btn">
-  <a href="#" class="btn-dribbble">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-      </svg>
-    </span>
-    Check My Dribbble
-  </a>
-</div>
-
-
-</section>
-
-<!-- ---------------------------ABout------------------------- -->
-
- <link rel="stylesheet" href="/about.css">
-<section class="about-hero">
- <div class="about-top">
-  <!-- LEFT -->
-  <div class="about-left">
-    <h1>It's Me<br><span>Dimas Pradipa A.</span></h1>
-  </div>
-
-  <!-- RIGHT -->
-  <div class="about-right">
-    <p>
-      Over the past 3 years, I have worked with various companies and
-      institutions. I enjoy creating interfaces that delight users and help
-      businesses grow. Based in Bogor, Indonesia, I am open to remote
-      opportunities worldwide.
-    </p>
-
-    <div class="socials">
-  <a href="#" class="social " aria-label="Website">
-    <i class="bi bi-globe"></i>
-  </a>
-
-  <a href="#" class="social" aria-label="LinkedIn">
-    <i class="bi bi-linkedin"></i>
-  </a>
-
-  <a href="#" class="social" aria-label="Dribbble">
-    <i class="bi bi-dribbble"></i>
-  </a>
-
-  <a href="#" class="social" aria-label="Behance">
-    <i class="bi bi-behance"></i>
-  </a>
-</div>
-
-  </div>
-</div>
-
-
-  <!-- VIDEO CARD -->
-  <div class="video-card">
-    <img src="src/video/about.png" alt="Video Preview">
-    <div class="play-btn">▶</div>
-  </div>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <h3>3+</h3>
-      <p>Years of Experience<br>in Design</p>
-    </div>
-    <div class="divider"></div>
-    <div class="stat">
-      <h3>16+</h3>
-      <p>Successfully Projects<br>Completed</p>
-    </div>
-    <div class="divider"></div>
-    <div class="stat">
-      <h3>3+</h3>
-      <p>Years of Experience<br>in Teaching</p>
-    </div>
-  </div>
-</section>
-
-<!-- -------------------------------------Profile Section------------------------- -->
- <link rel="stylesheet" href="/profile.css">
-<section class="profile-section">
-  <div class="profile-grid">
-
-    <!-- PROFILE CARD -->
-    <div class="profile-card">
+<!-- testimonial ------------------------------------------------------------  -->
+ <section class="testimonial">
   
-  <img src="src/profile/eazy.png" alt="" class="profile-img">
-</div>
+  <link rel="stylesheet" href="/project-css/testimonial.css  ">
+  <div class="testimonial-inner">
+    <h2 class="testimonial-title">
+  What <span>My Clients</span> Say
+</h2>
 
-    <!-- WORK EXPERIENCE -->
-  <div class="we-card">
-  <div class="we-card-title">
-    <span>Work Experience</span>
-    <i class="bi bi-briefcase"></i>
-  </div>
+    <div class="quote quote-left">“</div>
+    <div class="quote quote-right">”</div>
 
-  <ul class="we-timeline">
-    <li>
-      <small>Jul 2023 – Des 2025</small>
-      <h4 class="we-role purple">Product Design Teacher</h4>
-      <p>SMK IDN Boarding School</p>
-    </li>
+       
+ 
+    <div class="testimonial-slider">
+      <button class="navtest-btn" id="prev">←</button>
 
-    <li>
-      <small>Dec 2023 – Jun 2025</small>
-      <h4 class="we-role purple">Lead UI/UX Designer</h4>
-      <p>Crugle Studio</p>
-    </li>
-
-    <li>
-      <small>Feb 2023 – May 2023</small>
-      <h4 class="we-role orange">UI/UX & Social Media Designer</h4>
-      <p>Yurbi Shadaqat</p>
-    </li>
-
-    <li>
-      <small>Mar 2023 – Apr 2023</small>
-      <h4 class="we-role orange">UI/UX Mentor</h4>
-      <p>Nacita Training Center</p>
-    </li>
-  </ul>
-</div>
-
-
-    <!-- EDUCATION -->
-    <div class="card">
-      <div class="card-title">🎓 Education</div>
-
-      <ul class="timeline">
-        <li>
-          <small>Jul 2022 – Present</small>
-          <h4>Applied Bachelor</h4>
-          <p>Politeknik IDN Bogor</p>
-        </li>
-
-        <li>
-          <small>Mar 2023 – Apr 2023</small>
-          <h4>Google UX Design Certification</h4>
-          <p>Google Career Certificate</p>
-        </li>
-      </ul>
+    <div class="avatars">
+      <img data-index="0" src="src/avatar1.jpg">
+      <img data-index="1" src="src/avatar2.jpg">
+      <img data-index="2" class="active" src="src/avatar3.jpg">
+      <img data-index="3" src="src/avatar4.jpg">
+      <img data-index="4" src="src/avatar5.jpg">
     </div>
 
-    <!-- SKILLS -->
-    <div class="card">
-      <div class="card-title">🛠 Skills</div>
 
-      <div class="skills">
-        <span>Product Design</span>
-        <span>UI Design</span>
-        <span>UX Design</span>
-        <span>Design System</span>
-        <span>Illustration</span>
-        <span>3D</span>
-        <span>WordPress</span>
-        <span>Logo Design</span>
-      </div>
-
-    <div class="tools">
-  <div class="tool-icon">
-    <img src="src/profile/tools/material-icon-theme_figma.svg" alt="Figma">
-  </div>
-
-  <div class="tool-icon">
-    <img src="src/profile/tools/devicon_photoshop.svg" alt="Photoshop">
-  </div>
-
-  <div class="tool-icon">
-    <img src="src/profile/tools/devicon_framermotion.svg" alt="Illustrator">
-  </div>
-
-  <div class="tool-icon">
-    <img src="src/profile/tools/devicon_blender.svg" alt="Blender">
-  </div>
-  <div class="tool-icon">
-    <img src="src/profile/tools/mdi_wordpress.svg" alt="Blender">
-  </div>
-</div>
-
+      <button class="navtest-btn" id="next">→</button>
     </div>
+    <div class="testimonial-author">
+      <h4 id="testimonialName"></h4>
+      <span id="testimonialRole"></span>
+    </div>
+ <p class="testimonial-text" id="testimonialText"></p>
+
+
+    <!-- <div class="testimonial-author">
+      <h4>Helena Park</h4>
+      <span>Product Manager at Flowbox</span>
+    </div> -->
 
   </div>
 </section>
-<!-- --------------------------Award Section------------------------- -->
- <link rel="stylesheet" href="/award.css">
- <link rel="stylesheet" href="/award.css">
-<section class="award-section">
-  <div class="award-card">
+<script src="project-css/testimonial.js" defer></script>
+<!-- ideapadd----------------------------------------------- -->
+ <section class="idea-launchpad">
+  <link rel="stylesheet" href="/project-css/ide.css">
+  <div class="idea-launchpad__inner">
 
-    <div class="award-title">
-      <span>Award & Certifications</span>
-    </div>
+    <h2 class="idea-launchpad__title">
+      Start creating ideas and designs that help<br>
+      meet your company's needs.
+    </h2>
 
-    <div class="award-grid">
-      <div class="award-item">
-        <img src="src/awards/1.png" alt="Certificate 1">
-      </div>
+    <a href="#" class="idea-launchpad__btn">
+      Planning Your Business →
+    </a>
 
-      <div class="award-item">
-        <img src="src/awards/6.png" alt="Certificate 2">
-      </div>
-
-      <div class="award-item">
-        <img src="src/awards/3.jpg" alt="Certificate 3">
-      </div>
-
-      <div class="award-item">
-        <img src="src/awards/4.jpg" alt="Certificate 4">
-      </div>
-
-      <div class="award-item">
-        <img src="src/awards/5.jpg" alt="Certificate 5">
-      </div>
-
-      <div class="award-item">
-        <img src="src/awards/2.jpg" alt="Certificate 6">
-      </div>
-    </div>
+    <!-- Decorative shapes -->
+    <span class="idea-launchpad__spark spark-1"></span>
+    <span class="idea-launchpad__spark spark-2"></span>
 
   </div>
 </section>
 
-
-
-<script src="script.js"></script>
 </body>
 <footer class="site-footer">
   <div class="footer-container">
@@ -741,5 +674,4 @@ PayFun is designed in a trendy and modern way, with all layers well laid out. Pa
 
   </div>
 </footer>
-
 </html>

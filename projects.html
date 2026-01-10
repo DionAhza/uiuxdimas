@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dimas Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"/>
+
+</head>
+<nav class="navbar-wrap">
+  <div class="navbar">
+    <div class="pill"> <span>Hi Dimas!</span></div>
+
+    <ul class="menu">
+      <li ><a href="/index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
+      <li class="active">  <a href="/projects.html" style="text-decoration: none; color: #aaa;">Project</a></li>  
+      <li>Services</li>
+      <li>Class</li>
+      <li>Product</li>
+       
+    </ul>
+
+    <button class="contact-btn">
+      Get In Touch ↗
+    </button>
+  </div>
+</nav>
+
+<style>
+  
+/* NAVBAR */
+/* NAVBAR WRAP */
+.navbar-wrap {
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+.navbar-wrap.scrolled .navbar {
+  background: rgba(15,15,20,0.9);
+  box-shadow: 0 14px 45px rgba(0,0,0,0.45);
+}
+
+/* NAVBAR PILL */
+.navbar {
+  width: 85%;
+  background: rgba(20, 20, 25, 0.75);
+  backdrop-filter: blur(14px);
+  border-radius: 999px;
+  padding: 14px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+
+/* LEFT PILL */
+/* .pill {
+  background: rgba(255,255,255,0.04);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+} */
+
+.pill span {
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+  color: #aaa;
+}
+.menu li {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.menu li:hover {
+  color: #fff;
+}
+
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ACTIVE STATE */
+.menu li.active a {
+ background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+/* underline hover & active */
+.menu li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #B16CEA,
+    #FF5E69,
+    #FF8A56
+  );
+  transition: transform 0.3s ease;
+}
+
+.menu li:hover::after,
+.menu li.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* BUTTON */
+.contact-btn {
+  background: white;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.25);
+}
+
+</style>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document
+      .querySelector('.navbar-wrap')
+      .classList.toggle('scrolled', window.scrollY > 30);
+  });
+</script>
+
+<body>
+
+  <!-- NAVBAR -->
+ 
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <span class="subtitle">Hello, I'm Dimas.</span>
+
+      <h1>
+        Creating ideas and design that  
+        help meet your company's
+        need
+      </h1>
+
+      <div class="buttons">
+        <button class="btn primary">View My CV</button>
+        <button class="btn outline">Email me</button>
+      </div>
+    </div>
+
+    <div class="circle">
+  <img src="src/Scroll.png" alt="">
+</div>
+
+  </section>
+
+  <!-- MARQUEE -->
+ <div class="marquee-stack">
+
+  <!-- BACK (GRADIENT) -->
+  <div class="marquee marquee-back">
+    <div class="marquee-track">
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+
+      <!-- DUPLIKAT -->
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+    </div>
+  </div>
+
+  <!-- FRONT (WHITE) -->
+  <div class="marquee marquee-front">
+    <div class="marquee-track">
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+
+      <!-- DUPLIKAT -->
+      <span>User Research</span>
+      <span>User Flow</span>
+      <span>Wireframing</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+      <span>Usability Testing</span>
+      <span>Web Design</span>
+    </div>
+  </div>
+
+</div>
+
+  <section class="projects">
+  <div class="projects-header">
+    <h2>
+      Look at My <span>Best Work Projects.</span>
+    </h2>
+    <p>
+      Some of the best projects that I have filtered and gotten permission
+      from the client to be made public.
+    </p>
+  </div>
+
+  <!-- PROJECT 1 -->
+   <link rel="stylesheet" href="/project.css">
+  <div class="project">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">GrowHealth</span> – Smart Nutrition Companion
+      </h3>
+      <hr>
+      <p>
+        GrowHealth is a personal nutrition coaching app to build healthier
+        eating habits without the confusion of calories.
+        <br><br>
+        As the Product Design Lead, I led the entire design workflow of this
+        project, starting from understanding the problem and user needs,
+        translating insights into product strategy, designing user flows and
+        interfaces, and validating the solution through usability-driven design
+        decisions.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : Product Design Lead</li>
+        <hr>
+        <li><strong>Scope</strong> : End-to-end Product Design Process</li>
+        <hr>
+        <li><strong>Date</strong> : October – December 2023</li>
+      </ul>
+    </div>
+
+    <div class="project-image green">
+      <img src="src/projects/growhealth.webp" alt="GrowHealth App" />
+      <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project reverse">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">BROSISPKU</span> – Redesign Website
+      </h3>
+      <hr>
+      <p>
+        Brosispku is a digital platform focused on providing information,
+        services, and communication to its core audience. As part of this
+        redesign project, I restructured the information architecture, improved
+        the visual system, and enhanced overall usability to make the website
+        more professional and effective.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : UI/UX Designer</li>
+        <hr>
+        <li><strong>Scope</strong> : UI/UX Design, Web Design, Design System</li>
+        <hr>
+        <li><strong>Date</strong> : August – September 2023</li>
+      </ul>
+    </div>
+
+    <div class="project-image blue">
+      <img src="src/projects/brosispku.png" alt="BROSISPKU Website" />
+        <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+  <!-- PROJECT 3 -->
+   <link rel="stylesheet" href="/project.css">
+  <div class="project">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">Serverpoint</span> - Redesign Website
+      </h3>
+      <hr>
+      <p>
+        ServerPoint is a provider of web hosting, cloud VPS, and bare metal dedicated servers that has been operating for decades, providing infrastructure solutions for global websites and applications. Bare metal dedicated servers are physical server services where all resources are dedicated to a single user, providing high performance, full control, and scalability without the “shared resource” effect.
+
+In this project, the focus of the redesign is on ServerPoint’s Bare Metal Dedicated Servers page which introduces the bare metal infrastructure service, its functions, main features, and its benefits for business users or developers who need high-performance servers.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : Web Design</li>
+        <hr>
+        <li><strong>Scope</strong> : UI Design, Web Design</li>
+        <hr>
+        <li><strong>Date</strong> : February 2025</li>
+      </ul>
+    </div>
+
+    <div class="project-image green">
+      <img src="src/projects/serverpoint.png" alt="ServerPoint Website" />
+        <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 4 -->
+  <div class="project reverse">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">Auly Official</span> – Fashion Brand Website
+      </h3>
+      <hr>
+      <p>
+        Auly Official is a women's fashion brand focused on feminine, modern, and elegant clothing. Prior to this project, the Auly Official brand lacked an official website capable of professionally representing its visual identity and supporting its long-term digital business needs.
+
+A website is needed not only for brand presence but also as a primary platform for building consumer trust, showcasing product catalogs, and serving as the foundation for an integrated online sales ecosystem.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : Web Design & Wordpress Development</li>
+        <hr>
+        <li><strong>Scope</strong> : UI/UX Design, Web Design, Website Developer, Wordpress Developer</li>
+        <hr>
+        <li><strong>Date</strong> : July - August 2024</li>
+      </ul>
+    </div>
+
+    <div class="project-image blue">
+      <img src="src/projects/aulyofficial.png" alt="BROSISPKU Website" />
+        <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+  <!-- PROJECT 5 -->
+   <link rel="stylesheet" href="/project.css">
+  <div class="project">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">LeadLoom</span> – SaaS Landing Page
+      </h3>
+      <hr>
+      <p>
+        Streamline your sales processes with LeadLoom. a powerful sales management software designed to support sales and marketing teams. With its intuitive features, LeadLoom helps you effectively manage your sales pipeline, track goals and KPIs, and gain valuable insights for optimized performance, all in one comprehensive solution.
+
+Create stunning landing page KIT templates that captivate your audience and drive conversions. KIT products will be sold on the marketplace.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : UI/UX Designer</li>
+        <hr>
+        <li><strong>Scope</strong> : UI/UX Design, UI Kits, Web Design, Design System</li>
+        <hr>
+        <li><strong>Date</strong> :March - May 2024</li>
+      </ul>
+    </div>
+
+    <div class="project-image green">
+      <img src="src/projects/leadloom.png" alt="GrowHealth App" />
+        <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 6 -->
+  <div class="project reverse">
+    <div class="project-text">
+      <h3>
+        <!-- <span class="dot"></span> -->
+        <span class="project-title">PayFun</span> – Banking App
+      </h3>
+      <hr>
+      <p>
+        PayFun is a Premium & High Quality UI Kit with Full Features Finance, Banking, E-Wallet, Payments, Money Management and more with lots of features. PayFun comes with unique style and niche, you can easily edit and customize all elements with component design that can speed up the design process for your project.
+
+PayFun is designed in a trendy and modern way, with all layers well laid out. PayFun is equipped with a design system with hundreds of components. The Design System has been equipped with typography, iconography, color styles, components, elements, buttons, input forms, alerts, avatars, checkboxes and many others.
+      </p>
+
+      <ul class="project-meta">
+        <li><strong>Role</strong> : UI/UX Designer</li>
+        <hr>
+        <li><strong>Scope</strong> : UI/UX Design, UI Kits, Design System</li>
+        <hr>
+        <li><strong>Date</strong> : November 2023 - February 2024</li>
+      </ul>
+    </div>
+
+    <div class="project-image blue">
+      <img src="src/projects/payfun.png" alt="BROSISPKU Website" />
+        <div class="project-circle">
+    <img src="src/projects/project-circle.png" alt="View Project" />
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Section--------------------------------------------------------- -->
+ <link rel="stylesheet" href="/case.css">
+<section class="case-studies">
+  <div class="case-header">
+    <h2>
+      Look at My <span>Best Case Study Projects.</span>
+    </h2>
+    <p>
+      Here are some of my best case study projects and some projects from my
+      students who are learning how to create UI/UX Design projects.
+    </p>
+  </div>
+
+  <div class="case-grid">
+    <!-- CARD 1 -->
+    <div class="case-card green">
+  <div class="case-image">
+    <img src="src/case/ecoclass.png" alt="EcoClass App" />
+  </div>
+
+  <div class="case-content">
+    <small>Product Design Lead | Case Study</small>
+    <h3><span>EcoClass</span> – Recycling Education App</h3>
+
+    <div class="case-tags">
+      <span>UX Research</span>
+      <span>UI Design</span>
+      <span>Prototyping</span>
+      <span>Design System</span>
+    </div>
+  </div>
+</div>
+
+
+    <!-- CARD 2 -->
+    <div class="case-card dark-green">
+      <div class="case-image">
+        <img src="src/case/recybank.png" alt="RecyBank App" />
+      </div>
+
+      <div class="case-content">
+        <small>Product Design Lead | Case Study</small>
+        <h3><span>RecyBank</span> – Scan QR Machine</h3>
+
+        <div class="case-tags">
+          <span>UX Research</span>
+          <span>UI Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-action">
+    <button>↓ View more</button>
+  </div>
+</section>
+
+<!-- ------------------Exloration Section-------------------------  -->
+ <link rel="stylesheet" href="/exploration.css">
+<section class="exploration">
+  <div class="explore-header">
+    <h2>Look at My <span>Exploration</span></h2>
+    <p>
+      My Exploration Project which I like to update following different
+      design trends from year to year.
+    </p>
+  </div>
+
+  <div class="explore-grid">
+    <!-- Card -->
+    <div class="explore-card">
+      <img src="src/exploration/1.png" alt="Dashboard Project">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Dashboard</h3>
+      </div>
+    </div>
+
+    <div class="explore-card">
+      <img src="src/exploration/2.png" alt="Mobile App">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Mobile App</h3>
+            </div>
+    </div>
+
+    <div class="explore-card">
+      <img src="src/exploration/3.png" alt="Web Planning">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Web</h3>
+        
+      </div>
+    </div>
+    <div class="explore-card">
+      <img src="src/exploration/4.png" alt="Dashboard Project">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Dashboard</h3>
+       
+      </div>
+    </div>
+
+    <div class="explore-card">
+      <img src="src/exploration/5.png" alt="Mobile App">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Mobile App</h3>
+            </div>
+    </div>
+
+    <div class="explore-card">
+      <img src="src/exploration/6.png" alt="Web Planning">
+      <div class="card-body">
+        <h3><span class="exploration-title">OtwBank</span> - Web</h3>
+        
+      </div>
+    </div>
+  </div>
+
+ <div class="explore-btn">
+  <a href="#" class="btn-dribbble">
+    <span class="btn-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
+      </svg>
+    </span>
+    Check My Dribbble
+  </a>
+</div>
+
+
+</section>
+
+<!-- ---------------------------ABout------------------------- -->
+
+ <link rel="stylesheet" href="/about.css">
+<section class="about-hero">
+ <div class="about-top">
+  <!-- LEFT -->
+  <div class="about-left">
+    <h1>It's Me<br><span>Dimas Pradipa A.</span></h1>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="about-right">
+    <p>
+      Over the past 3 years, I have worked with various companies and
+      institutions. I enjoy creating interfaces that delight users and help
+      businesses grow. Based in Bogor, Indonesia, I am open to remote
+      opportunities worldwide.
+    </p>
+
+    <div class="socials">
+  <a href="#" class="social " aria-label="Website">
+    <i class="bi bi-globe"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Dribbble">
+    <i class="bi bi-dribbble"></i>
+  </a>
+
+  <a href="#" class="social" aria-label="Behance">
+    <i class="bi bi-behance"></i>
+  </a>
+</div>
+
+  </div>
+</div>
+
+
+  <!-- VIDEO CARD -->
+  <div class="video-card">
+    <img src="src/video/about.png" alt="Video Preview">
+    <div class="play-btn">▶</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Design</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>16+</h3>
+      <p>Successfully Projects<br>Completed</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <h3>3+</h3>
+      <p>Years of Experience<br>in Teaching</p>
+    </div>
+  </div>
+</section>
+
+<!-- -------------------------------------Profile Section------------------------- -->
+ <link rel="stylesheet" href="/profile.css">
+<section class="profile-section">
+  <div class="profile-grid">
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+  
+  <img src="src/profile/eazy.png" alt="" class="profile-img">
+</div>
+
+    <!-- WORK EXPERIENCE -->
+  <div class="we-card">
+  <div class="we-card-title">
+    <span>Work Experience</span>
+    <i class="bi bi-briefcase"></i>
+  </div>
+
+  <ul class="we-timeline">
+    <li>
+      <small>Jul 2023 – Des 2025</small>
+      <h4 class="we-role purple">Product Design Teacher</h4>
+      <p>SMK IDN Boarding School</p>
+    </li>
+
+    <li>
+      <small>Dec 2023 – Jun 2025</small>
+      <h4 class="we-role purple">Lead UI/UX Designer</h4>
+      <p>Crugle Studio</p>
+    </li>
+
+    <li>
+      <small>Feb 2023 – May 2023</small>
+      <h4 class="we-role orange">UI/UX & Social Media Designer</h4>
+      <p>Yurbi Shadaqat</p>
+    </li>
+
+    <li>
+      <small>Mar 2023 – Apr 2023</small>
+      <h4 class="we-role orange">UI/UX Mentor</h4>
+      <p>Nacita Training Center</p>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- EDUCATION -->
+    <div class="card">
+      <div class="card-title">🎓 Education</div>
+
+      <ul class="timeline">
+        <li>
+          <small>Jul 2022 – Present</small>
+          <h4>Applied Bachelor</h4>
+          <p>Politeknik IDN Bogor</p>
+        </li>
+
+        <li>
+          <small>Mar 2023 – Apr 2023</small>
+          <h4>Google UX Design Certification</h4>
+          <p>Google Career Certificate</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+      <div class="card-title">🛠 Skills</div>
+
+      <div class="skills">
+        <span>Product Design</span>
+        <span>UI Design</span>
+        <span>UX Design</span>
+        <span>Design System</span>
+        <span>Illustration</span>
+        <span>3D</span>
+        <span>WordPress</span>
+        <span>Logo Design</span>
+      </div>
+
+    <div class="tools">
+  <div class="tool-icon">
+    <img src="src/profile/tools/material-icon-theme_figma.svg" alt="Figma">
+  </div>
+
+  <div class="tool-icon">
+    <img src="src/profile/tools/devicon_photoshop.svg" alt="Photoshop">
+  </div>
+
+  <div class="tool-icon">
+    <img src="src/profile/tools/devicon_framermotion.svg" alt="Illustrator">
+  </div>
+
+  <div class="tool-icon">
+    <img src="src/profile/tools/devicon_blender.svg" alt="Blender">
+  </div>
+  <div class="tool-icon">
+    <img src="src/profile/tools/mdi_wordpress.svg" alt="Blender">
+  </div>
+</div>
+
+    </div>
+
+  </div>
+</section>
+<!-- --------------------------Award Section------------------------- -->
+ <link rel="stylesheet" href="/award.css">
+ <link rel="stylesheet" href="/award.css">
+<section class="award-section">
+  <div class="award-card">
+
+    <div class="award-title">
+      <span>Award & Certifications</span>
+    </div>
+
+    <div class="award-grid">
+      <div class="award-item">
+        <img src="src/awards/1.png" alt="Certificate 1">
+      </div>
+
+      <div class="award-item">
+        <img src="src/awards/6.png" alt="Certificate 2">
+      </div>
+
+      <div class="award-item">
+        <img src="src/awards/3.jpg" alt="Certificate 3">
+      </div>
+
+      <div class="award-item">
+        <img src="src/awards/4.jpg" alt="Certificate 4">
+      </div>
+
+      <div class="award-item">
+        <img src="src/awards/5.jpg" alt="Certificate 5">
+      </div>
+
+      <div class="award-item">
+        <img src="src/awards/2.jpg" alt="Certificate 6">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h3>Hi <span>Dimas!</span></h3>
+      <p>©2025 Website Personal by Dimas Pradipa Abiyuda</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <a href="#contact" class="footer-cta">
+        Get In Touch <i class="bi bi-arrow-up-right"></i>
+      </a>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Behance"><i class="bi bi-behance"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</html>

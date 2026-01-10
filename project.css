@@ -94,6 +94,14 @@
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
+.project-text hr {
+  border: none;
+  height: 1px;
+  /* width: 48px; */
+  background: gray;
+  margin: 16px 0 22px;
+  opacity: 0.8;
+}
 
 .project-text p {
   color: #cbd5e1;
@@ -118,32 +126,54 @@
 
 /* PROJECT IMAGE */
 .project-image {
-  border-radius: 22px;
-  padding: 30px;
-  display: flex;
+  position: relative;        /* wajib untuk circle */
+  display: inline-flex;      /* 🔥 ikut ukuran gambar */
   justify-content: center;
   align-items: center;
+  border-radius: 16px;
 }
 
-.project-image.green {
-  background: linear-gradient(
-    135deg,
-    #0f3d2e,
-    #14532d
-  );
-}
 
-.project-image.blue {
-  background: linear-gradient(
-    135deg,
-    #1e3a8a,
-    #2563eb
-  );
-}
 
 .project-image img {
-  width: 100%;
-  max-width: 420px;
+  width: 627px;              /* 🔥 kontrol ukuran di sini */
+  max-width: 100%;
+  height: 425px;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  display: block;
+}
+
+/* CIRCLE OVERLAY */
+.project-circle {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+.project-circle img {
+  width: 120px;
+  height: 120px;
+  animation: spin 10s linear infinite;
+}
+
+
+/* HOVER EFFECT */
+.project-image:hover .project-circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OPTIONAL: IMAGE SEDIKIT GELAP SAAT HOVER */
+.project-image:hover > img {
+  filter: brightness(0.7);
+  transform: scale(1.02);
+  transition: 0.35s ease;
 }
