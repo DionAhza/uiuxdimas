@@ -10,6 +10,8 @@
 </head>
 <body>
     <nav class="navbar-wrap">
+  
+
   <div class="navbar">
     <div class="pill"> <span>Hi Dimas!</span></div>
 
@@ -20,7 +22,9 @@
       <li>Class</li>
       <li>Product</li>
     </ul>
-
+    <button class="menu-toggle">
+  ☰
+</button>
     <button class="contact-btn">
       Get In Touch ↗
     </button>
@@ -173,10 +177,84 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255,255,255,0.25);
 }
+/* ===== RESPONSIVE ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 900px) {
+  .navbar {
+    width: 94%;
+    padding: 12px 18px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 72px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(20,20,25,0.95);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    padding: 18px 24px;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  .menu.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .contact-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 500px) {
+  .pill span {
+    font-size: 13px;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+}
 
 </style>
 
 <script>
+  window.addEventListener('scroll', () => {
+    document
+      .querySelector('.navbar-wrap')
+      .classList.toggle('scrolled', window.scrollY > 30);
+  });
+    const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
   window.addEventListener('scroll', () => {
     document
       .querySelector('.navbar-wrap')
