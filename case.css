@@ -75,35 +75,37 @@
 }
 
 /* GRADIENT CARD */
-.case-card.green {
+/* .case-card.green {
   background: linear-gradient(160deg,#4ade80,#166534);
 }
 
 .case-card.dark-green {
   background: linear-gradient(160deg,#22c55e,#064e3b);
-}
+} */
 
 /* IMAGE */
 .case-image {
-  height: 320px;              /* tinggi area atas */
+  height: 350px;              /* tinggi area atas */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+/* 
 .case-card.green .case-image {
   background: linear-gradient(180deg,#4ade80,#166534);
 }
 
 .case-card.dark-green .case-image {
   background: linear-gradient(180deg,#22c55e,#064e3b);
-}
+} */
 
 .case-image img {
   width: 100%;
-  max-width: 300px;
-  border-radius: 18px;
+  height: 100%;
+  object-fit: cover;      /* FULL COVER */
+  border-radius: 0;       /* HILANGIN RADIUS */
+  display: block;
 }
 
 

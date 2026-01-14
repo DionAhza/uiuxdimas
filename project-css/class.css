@@ -52,8 +52,8 @@
 
 /* IMAGE */
 .class-thumb {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  padding: 24px;
+  /* background: linear-gradient(135deg, #22c55e, #16a34a);
+  padding: 24px; */
   position: relative;
 }
 
@@ -141,5 +141,101 @@
 @media (max-width: 900px) {
   .class-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .class-section {
+    padding: 90px 24px;
+  }
+
+  .class-title {
+    font-size: 30px;
+  }
+
+  .class-subtitle {
+    font-size: 16px;
+  }
+
+  .class-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .class-body {
+    padding: 18px 20px 22px;
+  }
+
+  .class-name {
+    font-size: 14px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .class-section {
+    padding: 70px 18px;
+  }
+
+  .class-head {
+    margin-bottom: 50px;
+  }
+
+  .class-title {
+    font-size: 26px;
+  }
+
+  .class-subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  /* CARD */
+  .class-card {
+    border-radius: 14px;
+  }
+
+  /* IMAGE */
+  .class-thumb img {
+    border-radius: 0;
+  }
+
+  /* BADGES */
+  .class-category {
+    font-size: 11px;
+    padding: 5px 10px;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .class-discount {
+    font-size: 11px;
+    padding: 5px 9px;
+    top: 12px;
+    right: 12px;
+  }
+
+  /* TEXT */
+  .class-body {
+    padding: 16px 16px 18px;
+  }
+
+  .class-mode {
+    font-size: 11px;
+  }
+
+  .class-name {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  /* PRICE */
+  .price-now {
+    font-size: 14px;
+  }
+
+  .price-old {
+    font-size: 12px;
   }
 }

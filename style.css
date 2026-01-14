@@ -218,7 +218,17 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+@media (max-width: 900px) {
+  .marquee {
+    width: 100%;
+    left: 0;
+    transform: rotate(-2deg);
+  }
 
+  .marquee-stack {
+    overflow: hidden;
+  }
+}
 
 
 .site-footer {

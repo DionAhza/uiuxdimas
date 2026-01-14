@@ -115,3 +115,115 @@
   font-size: 13px;
   color: #8e8e8e;
 }
+/* =========================
+   RESPONSIVE TESTIMONIAL
+========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .testimonial {
+    padding: 100px 16px;
+  }
+
+  .testimonial-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .quote {
+    font-size: 70px;
+  }
+
+  .quote-left {
+    top: -25px;
+  }
+
+  .quote-right {
+    bottom: 80px;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  .testimonial-slider {
+    gap: 30px;
+  }
+
+  .avatars img {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .testimonial {
+    padding: 80px 14px;
+  }
+
+  .testimonial-title {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  /* QUOTE DIKECILIN & DIPOSISIIN */
+  .quote {
+    font-size: 55px;
+    opacity: 0.4;
+  }
+
+  .quote-left {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+  }
+
+  .quote-right {
+    display: none; /* biar ga rame */
+  }
+
+  .testimonial-text {
+    font-size: 14.5px;
+    line-height: 1.75;
+    margin-bottom: 40px;
+  }
+
+  /* SLIDER STACK */
+  .testimonial-slider {
+    gap: 18px;
+  }
+
+  .avatars {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .avatars img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .avatars img.active {
+    transform: scale(1.15);
+  }
+
+  /* BUTTON */
+  .navtest-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  /* AUTHOR */
+  .testimonial-author h4 {
+    font-size: 16px;
+  }
+
+  .testimonial-author span {
+    font-size: 12px;
+  }
+}
