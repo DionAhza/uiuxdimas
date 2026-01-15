@@ -152,6 +152,52 @@ body {
     transform: rotate(360deg);
   }
 }
+/* =========================
+   RESPONSIVE HERO
+========================= */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px 100px;
+    gap: 50px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 18px 0 28px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CIRCLE FIX */
+  .circle {
+    position: static;
+    transform: none;
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    align-self: center;
+  }
+}
 
 
 /* MARQUEE */
