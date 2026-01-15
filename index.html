@@ -9,15 +9,16 @@
 
 </head>
 <body>
-    <nav class="navbar-wrap">
-  
+     <nav class="navbar-wrap">
+  <div class="nav-overlay"></div>
+
 
   <div class="navbar">
     <div class="pill"> <span>Hi Dimas!</span></div>
 
     <ul class="menu">
      <li class="active"><a href="/index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
-    <a href="/projects.html" style="text-decoration: none; color: #aaa;"><li> Project</li></a>  
+    <li ><a href="/projects.html" style="text-decoration: none; color: #aaa;"> Project</a> </li> 
       <li>Services</li>
       <li>Class</li>
       <li>Product</li>
@@ -187,36 +188,83 @@
   cursor: pointer;
 }
 
+/* ===== MOBILE NAV ENHANCED ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
 /* TABLET & MOBILE */
 @media (max-width: 900px) {
   .navbar {
     width: 94%;
     padding: 12px 18px;
   }
-
+  .navbar,
   .menu {
-    position: absolute;
-    top: 72px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(20,20,25,0.95);
-    backdrop-filter: blur(16px);
-    border-radius: 20px;
-    padding: 18px 24px;
-    flex-direction: column;
-    gap: 18px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    backdrop-filter: none;
+    background: rgba(18,18,22,0.95);
+  }
 
+  /* OVERLAY */
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
     opacity: 0;
     pointer-events: none;
-    transform: translateX(-50%) translateY(-10px);
-    transition: 0.3s ease;
+    transition: .35s ease;
+    z-index: 90;
+  }
+
+  .nav-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* MOBILE MENU CARD */
+  .menu {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px) scale(.96);
+    width: min(92%, 340px);
+
+    background: rgba(18,18,22,0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 26px;
+    padding: 26px 24px;
+
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,.65);
+    opacity: 0;
+    pointer-events: none;
+    transition: .35s ease;
+    z-index: 100;
   }
 
   .menu.show {
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+
+  /* MENU ITEM */
+  .menu li {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .menu li::after {
+    display: none;
   }
 
   .menu-toggle {
@@ -240,25 +288,27 @@
   }
 }
 
+
 </style>
 
 <script>
-  window.addEventListener('scroll', () => {
-    document
-      .querySelector('.navbar-wrap')
-      .classList.toggle('scrolled', window.scrollY > 30);
-  });
-    const toggle = document.querySelector('.menu-toggle');
+  const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
+  const overlay = document.querySelector('.nav-overlay');
+  const navbar = document.querySelector('.navbar-wrap');
 
   toggle.addEventListener('click', () => {
     menu.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    menu.classList.remove('show');
+    overlay.classList.remove('show');
   });
 
   window.addEventListener('scroll', () => {
-    document
-      .querySelector('.navbar-wrap')
-      .classList.toggle('scrolled', window.scrollY > 30);
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
   });
 </script>
 <section class="project-hero">
