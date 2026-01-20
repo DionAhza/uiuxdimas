@@ -22,7 +22,7 @@
 
 /* NAVBAR PILL */
 .navbar {
-  width: 92%;
+  width: 90%;
   background: rgba(20, 20, 25, 0.75);
   backdrop-filter: blur(14px);
   border-radius: 999px;
@@ -273,7 +273,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 110px 60px;
+  padding: 110px 90px;
   position: relative;
 }
 
