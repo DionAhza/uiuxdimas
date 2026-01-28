@@ -93,11 +93,11 @@
 }
 
 .hero-btn {
-  padding: 20px 40px;
+  padding: 20px 34px;
   text-decoration: none;
   border-radius: 999px;
   font-size: 14px;
-  font-weight: 600;
+  
   transition: .3s ease;
 }
 
@@ -115,6 +115,7 @@
 /* SECONDARY */
 .hero-btn.secondary {
   background: transparent;
+  padding: 20px 36px;
   color: #fff;
   border: 1.5px solid transparent;
   background:
@@ -151,6 +152,38 @@
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    max-width: 100%;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 
 @media (max-width: 480px) {
   .hero-title {

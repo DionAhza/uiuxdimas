@@ -8,8 +8,8 @@
 
 /* TITLE */
 .services-title {
-  font-size: 34px;
-  font-weight: 800;
+  font-size: 42px;
+  font-weight: 600;
   line-height: 1.3;
   margin-bottom: 48px;
 }
@@ -34,30 +34,37 @@
 /* ITEM */
 .service-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  padding: 22px 26px;
-  font-size: 20px;
+  padding: 34px;
+  font-size: 34px;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
 
+  border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   transition: .35s ease;
 }
 
-.service-item i {
-  font-size: 26px;
-  transition: transform .3s ease;
+/* SVG ARROW */
+.service-item svg {
+  width: 70px;
+  height: 70px;
+  transform: rotate(130deg); /* ↗ kanan atas */
+  transition: transform .3s ease, opacity .3s ease;
+  opacity: .8;
+  flex-shrink: 0;
 }
 
-/* HOVER */
-.service-item:hover i {
-  transform: translate(6px, -6px);
+/* HOVER ICON */
+.service-item:hover svg {
+  transform: rotate(180deg) translate(6px, -6px);
+  opacity: 1;
 }
 
-/* ACTIVE */
+/* HOVER ITEM */
 .service-item:hover {
   border-radius: 14px;
   border-bottom: none;
@@ -69,7 +76,6 @@
     #FF8A56
   );
 }
-
 
 /* NON ACTIVE HOVER */
  

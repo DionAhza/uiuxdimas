@@ -102,21 +102,35 @@
 }
 
 .project-meta {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   font-size: 18px;
-  color: #FCFCFC;
-  
+  color: #fcfcfc;
 }
 
-.project-meta li {
-  margin-bottom: 8px;
+.meta-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
-.project-meta strong {
-  color: #FCFCFC;
-  margin-left: 38px;
-  
+.meta-label {
+  color: #9ca3af;
+  font-weight: 500;
 }
+
+.meta-value {
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.project-meta hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
 
 /* PROJECT IMAGE */
 .project-image {

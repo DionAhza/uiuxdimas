@@ -5,7 +5,9 @@
   font-family: 'Bai Jamjuree', sans-serif;
   scroll-behavior: smooth;
 }
-  
+  body{
+    overflow-x: hidden;
+  }
 /* NAVBAR */
 /* NAVBAR WRAP */
 .navbar-wrap {
@@ -275,6 +277,7 @@ body {
   align-items: center;
   padding: 110px 90px;
   position: relative;
+  
 }
 
 .hero-left {
@@ -310,7 +313,7 @@ body {
 }
 
 .btn {
-  padding: 14px 28px;
+  padding: 18px 28px;
   border-radius: 999px;
   font-size: 15px;
   cursor: pointer;
@@ -324,6 +327,7 @@ body {
     #FF8A56,
     #FFA84B
   );
+  padding: 18px 34px;
   border: none;
   color: white;
 }
@@ -334,8 +338,10 @@ body {
 }
 
 
+
 .btn.outline {
   background: transparent;
+  padding: 20px 40px;
   color: #fff;
   border: 1.5px solid transparent;
   background-image:
@@ -460,7 +466,7 @@ body {
 .marquee-stack {
   position: relative;
   height: 90px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 /* BASE */
