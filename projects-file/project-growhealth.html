@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-growth</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../project-show/project-show.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+<body>
+       <nav class="navbar-wrap">
+  <div class="nav-overlay"></div>
+
+
+  <div class="navbar">
+    <div class="pill"> <span>Hi Dimas!</span></div>
+
+    <ul class="menu">
+     <li ><a href="/index.html" style="text-decoration: none; color: #aaa;">Home</a></li>
+    <li class="active"><a href="/projects.html" style="text-decoration: none; color: #aaa;"> Project</a> </li> 
+      <li>Services</li>
+      <li>Class</li>
+      <li>Product</li>
+    </ul>
+    <button class="menu-toggle">
+  ☰
+</button>
+    <button class="contact-btn">
+      Get In Touch ↗
+    </button>
+  </div>
+</nav>  
+ <style>
+
+
+</style>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const overlay = document.querySelector('.nav-overlay');
+  const navbar = document.querySelector('.navbar-wrap');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    overlay.classList.toggle('show');
+  });
+
+  overlay.addEventListener('click', () => {
+    menu.classList.remove('show');
+    overlay.classList.remove('show');
+  });
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  });
+</script>
+    <section class="project-showcase">
+  <div class="project-mockup">
+    <img src="../src/projects/GrowHealth.png" alt="GrowHealth App">
+  </div>
+
+  <div class="project-info">
+    <h2>
+      <span>GrowHealth</span> – Smart<br>
+      Nutrition Companion
+    </h2>
+
+    <div class="project-meta">
+      <div class="meta-row">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">Product Design Lead</span>
+      </div>
+
+      <div class="meta-row">
+        <span class="meta-label">Scope</span>
+        <span class="meta-value">
+          End-to-end Product Design Process, from brief interpretation,
+          UX Strategy, UI Design, Design System
+        </span>
+      </div>
+
+      <div class="meta-row">
+        <span class="meta-label">Date</span>
+        <span class="meta-value">October – December 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="case-section">
+  <div class="case-card">
+    
+    <div class="case-item">
+      <h4>Project Background</h4>
+      <p>
+       Nutritional health issues in Indonesia are still closely related to the public's lack of understanding of balanced diets and daily nutritional management, especially for those with certain health conditions. Amidst the rise in smartphone use, many available nutrition apps still focus on general calorie calculations and fail to address personal needs, the context of local food cultures, and provide accessible education for lay users. This gap presents an opportunity to design a more personalized and relevant nutrition mentoring app—not only helping users understand what they're eating, but also guiding them to develop sustainable healthy eating habits through contextual, educational, and actionable recommendations for everyday life.
+      </p>
+    </div>
+
+    <div class="case-item">
+      <h4>Problems</h4>
+      <p>Indonesians seeking to maintain or improve their health often struggle to consistently adopt healthy eating habits due to a lack of practical, personalized, and relevant nutritional insights. Current nutrition apps tend to provide general and technical information, such as calorie calculations, without considering individual health conditions, local dietary habits, and users' limited nutritional literacy. As a result, users feel confused, lack confidence in making food decisions, and fail to develop long-term healthy eating habits.</p>
+    </div>
+
+    <div class="case-item">
+      <h4>Solution</h4>
+      <p>
+       The proposed solution is a nutrition mentoring app focused on education and personalized support, helping users understand and implement healthy eating patterns tailored to their health and daily habits. The app not only presents nutritional data but also translates it into practical, easy-to-understand guidance through contextual food recommendations, visual portion sizes, and step-by-step instructions that support the development of sustainable healthy eating habits.
+      </p>
+    </div>
+
+    
+    <div class="case-item">
+      <h4><span>Survey</span> and interview results</h4>
+      <p>
+       Research shows a strong opportunity to build digital diet products that can increase user adoption and retention through a more personalized and easy-to-understand mentoring approach. Approximately 70–80% of users prioritize practical dietary guidance and food recommendations over technical features like calorie calculations, while ±60–70% prefer a simple, cognitively less demanding experience. Furthermore, ±75% of users expect an inclusive experience for all levels of nutritional literacy, and ±80% value accessibility as an indicator of product quality. These findings indicate that products that simplify the complexity of nutrition, build trust through contextual recommendations, and support the gradual formation of healthy habits have greater potential to increase long-term engagement, reduce churn, and create significant differentiation in the health app market.
+      </p>
+    </div>
+    <div class="case-item">
+      <h4>User Persona</h4>
+      <h3>1. User Persona 1 - Rina Pratiwi</h3>
+      <p>
+       Rina represents a young urban professional with a flexible but irregular work schedule. Her busy work schedule, frequent overtime, and numerous meetings made her diet inconsistent, leading her to order food online more often for convenience, rather than health reasons. Over time, Rina began experiencing health issues such as GERD, weight gain, and fatigue, which sparked her need to improve her diet. However, her previous experience with diet apps frustrated her with too many numbers, tedious input, and technical-feeling information. Rina needed a simple and supportive solution—she wanted to know what to eat today, with easy-to-understand, visual guidance that didn't leave her feeling overwhelmed. This persona highlights the need for a UX experience that focuses on clarity, simplicity, and daily support for users with limited nutritional literacy but high motivation to change.
+      </p>
+      <img src="project-show-img/User Persona - Budi Santoso 2.png" alt="Budi Santoso">
+      
+    </div>
+    <div class="case-item">
+     
+      <h3>2. User Persona 2 - Budi Santoso</h3>
+      <p>
+       Budi represents an adult user with a sedentary lifestyle and long-term health risks. A sedentary work routine, minimal exercise, and a habit of consuming sugary and fatty foods led to weight gain, which eventually led to a medical warning about his risk of diabetes. Despite his strong desire to live a healthier life, Budi felt confused about where to start. His previous experience with diet apps focused solely on tracking weight without providing clear guidance, leaving him unmotivated. Budi needed clear yet simple guidance—food recommendations that align with his blood sugar levels, safe portion sizes, and motivating visuals and progress feedback. This persona emphasizes the importance of a UX that builds trust, reduces complexity, and provides actionable guidance for users with more serious health needs.
+      </p>
+      <img src="project-show-img/User Persona - Budi Santoso 1.png" alt="Budi Santoso">
+      
+    </div>
+
+    <div class="case-item">
+      <h4>User Journey Maps - Rina Pertiwi</h4>
+      <h3>1. User Journey Maps - Rina Pratiwi</h3>
+      <p>
+       Rina represents a young urban professional with a flexible but irregular work schedule. Her busy work schedule, frequent overtime, and numerous meetings made her diet inconsistent, leading her to order food online more often for convenience, rather than health reasons. Over time, Rina began experiencing health issues such as GERD, weight gain, and fatigue, which sparked her need to improve her diet. However, her previous experience with diet apps frustrated her with too many numbers, tedious input, and technical-feeling information. Rina needed a simple and supportive solution—she wanted to know what to eat today, with easy-to-understand, visual guidance that didn't leave her feeling overwhelmed. This persona highlights the need for a UX experience that focuses on clarity, simplicity, and daily support for users with limited nutritional literacy but high motivation to change.
+      </p>
+      <img src="project-show-img/User Journey maps- Budi Santoso 2.png" alt="Budi Santoso">
+      
+    </div>
+    <div class="case-item">
+     
+      <h3>2. User Journey Maps  - Budi Santoso</h3>
+      <p>
+       Budi represents an adult user with a sedentary lifestyle and long-term health risks. A sedentary work routine, minimal exercise, and a habit of consuming sugary and fatty foods led to weight gain, which eventually led to a medical warning about his risk of diabetes. Despite his strong desire to live a healthier life, Budi felt confused about where to start. His previous experience with diet apps focused solely on tracking weight without providing clear guidance, leaving him unmotivated. Budi needed clear yet simple guidance—food recommendations that align with his blood sugar levels, safe portion sizes, and motivating visuals and progress feedback. This persona emphasizes the importance of a UX that builds trust, reduces complexity, and provides actionable guidance for users with more serious health needs.
+      </p>
+      <img src="project-show-img/User Journey maps- Budi Santoso 2.png" alt="Budi Santoso">
+      
+    </div>
+    <div class="case-item">
+    <h4>How Might we statments</h4>
+     <ul>
+        <li>How might we present nutrition information in a way that feels approachable and non-technical for users with low nutrition literacy?</li>
+        <li>How might we build user enthusiasm for maintaining a consistent diet/bulking routine?</li>
+        <li>How might we make consultations more conversational and effective in providing user feedback?</li>
+        <li>How might we personalize food recommendations based on users’ health conditions, habits, and local eating context?</li>
+        <li>How might we help users build healthier eating habits gradually instead of pushing extreme or rigid diet rules?</li>
+        <li>How might we keep users motivated to continue without requiring tedious manual food logging every day?</li>
+     </ul>
+     
+      
+    </div>
+
+    <div class="case-item">
+        <h4>Brainstorming for solution ideas</h4>
+        <img src="project-show-img/Groups.png" alt="">
+    </div>
+     <div class="case-item">
+      
+      <h3>1. Flow Activity</h3>
+      <p>
+       The journey begins when a user accesses the Activity feature. This is typically triggered by a simple intention, such as wanting to start moving, view workout options, or check out available activity features. The user enters the main activity page, which serves as an overview and orientation. This page introduces the types of activities available without pressure to start immediately. The user then selects Running as the activity they wish to engage in. This is the first point where they indicate a more specific intention.
+
+Before starting, the user is given the option to:
+View activity details (duration, benefits, estimated calories, etc.)
+Finish immediately without starting
+If the user does not want to view details, the flow ends without penalty. If the user chooses to view details, they can then start the running activity. The system facilitates the transition from intention to concrete action. The flow ends simply, whether the user starts the activity or not. There are no excessive pop-ups or guilt-driven messaging.
+      </p>
+      <img src="project-show-img/User Flow Aktivitas 1.png" alt="Budi Santoso">
+      <img src="project-show-img/UI Activity 1.png" alt="">
+      
+    </div>
+     <div class="case-item">
+      
+      <h3>2. Flow Tracker Healthy Drinks Habit</h3>
+      <p>
+       The journey begins when a user accesses the Activity feature. This is typically triggered by a simple intention, such as wanting to start moving, view workout options, or check out available activity features. The user enters the main activity page, which serves as an overview and orientation. This page introduces the types of activities available without pressure to start immediately. The user then selects Running as the activity they wish to engage in. This is the first point where they indicate a more specific intention.
+
+Before starting, the user is given the option to:
+View activity details (duration, benefits, estimated calories, etc.)
+Finish immediately without starting
+If the user does not want to view details, the flow ends without penalty. If the user chooses to view details, they can then start the running activity. The system facilitates the transition from intention to concrete action. The flow ends simply, whether the user starts the activity or not. There are no excessive pop-ups or guilt-driven messaging.
+      </p>
+      <img src="project-show-img/User Flow Aktivitas 1.png" alt="Budi Santoso">
+      <img src="project-show-img/UI Activity 1.png" alt="">
+      
+    </div>
+     <div class="case-item">
+      
+      <h3>3. Flow AI QR Food Scanner</h3>
+      <p>
+       The journey begins when a user accesses the Activity feature. This is typically triggered by a simple intention, such as wanting to start moving, view workout options, or check out available activity features. The user enters the main activity page, which serves as an overview and orientation. This page introduces the types of activities available without pressure to start immediately. The user then selects Running as the activity they wish to engage in. This is the first point where they indicate a more specific intention.
+
+Before starting, the user is given the option to:
+View activity details (duration, benefits, estimated calories, etc.)
+Finish immediately without starting
+If the user does not want to view details, the flow ends without penalty. If the user chooses to view details, they can then start the running activity. The system facilitates the transition from intention to concrete action. The flow ends simply, whether the user starts the activity or not. There are no excessive pop-ups or guilt-driven messaging.
+      </p>
+      <img src="project-show-img/User Flow Aktivitas 1.png" alt="Budi Santoso">
+      <img src="project-show-img/UI Activity 1.png" alt="">
+      
+    </div>
+     <div class="case-item">
+      
+      <h3>4. Flow AI Coach</h3>
+      <p>
+       The journey begins when a user accesses the Activity feature. This is typically triggered by a simple intention, such as wanting to start moving, view workout options, or check out available activity features. The user enters the main activity page, which serves as an overview and orientation. This page introduces the types of activities available without pressure to start immediately. The user then selects Running as the activity they wish to engage in. This is the first point where they indicate a more specific intention.
+
+Before starting, the user is given the option to:
+View activity details (duration, benefits, estimated calories, etc.)
+Finish immediately without starting
+If the user does not want to view details, the flow ends without penalty. If the user chooses to view details, they can then start the running activity. The system facilitates the transition from intention to concrete action. The flow ends simply, whether the user starts the activity or not. There are no excessive pop-ups or guilt-driven messaging.
+      </p>
+      <img src="project-show-img/User Flow Aktivitas 1.png" alt="Budi Santoso">
+      <img src="project-show-img/UI Activity 1.png" alt="">
+      
+    </div>
+    <div class="case-item-cta">
+        <h4 >📖<span>Thanks for reading</span>📖</h4>
+        <div class="case-button-cta">
+            <button class="btn-gradient">Previous</button>
+            <button class="btn-gradient">Next Project</button>
+        </div>
+    </div>
+  </div>
+  
+
+  
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h3>Hi <span>Dimas!</span></h3>
+      <p>©2025 Website Personal by Dimas Pradipa Abiyuda</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <a href="#contact" class="footer-cta">
+        Get In Touch <i class="bi bi-arrow-up-right"></i>
+      </a>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="Website"><i class="bi bi-globe"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Behance"><i class="bi bi-behance"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
