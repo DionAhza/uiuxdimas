@@ -1,6 +1,6 @@
 .case-studies {
-  padding: 120px 80px;
-  background: radial-gradient(circle at top, #141417, #0b0b0e);
+  padding: 10px 80px;
+   background: #0b0b0e;
   color: #fff;
 }
 
@@ -25,7 +25,7 @@
 
 .case-header p {
   color: #9ca3af;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .case-content h3 span {
-  background: linear-gradient(90deg,#c084fc,#f472b6);
+  background: linear-gradient(90deg,#b16cea,#ff5e69,#ff8a56);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

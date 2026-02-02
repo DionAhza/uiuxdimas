@@ -15,7 +15,9 @@
 }
 
 .explore-header h2 span {
-  color: #ff7a18;
+   background: linear-gradient(90deg,#b16cea,#ff5e69,#ff8a56);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
 .explore-header p {
